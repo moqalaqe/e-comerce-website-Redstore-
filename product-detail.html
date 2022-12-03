@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>All Products - RedStore</title>
+</head>
+<body>
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="./images/logo.png" width="125px" alt="img">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="./images/cart.png" width="30px" height="30px" alt="img"></a>
+            <img src="./images/menu.png" class="menu-icon" alt="img" onclick="MenuToggle()">
+        </div>
+    </div> 
+
+    <!--------- Single Product Details -------->
+    <div class="small-container, single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="./images/gallery-1.jpg" width="100%" 
+                id="productImg" alt="img">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="./images/gallery-1.jpg" width="100%"  class="small-img" alt="img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/gallery-2.jpg" width="100%"  class="small-img" alt="img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/gallery-3.jpg" width="100%"
+                        class="small-img" alt="img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/gallery-4.jpg" width="100%"
+                        class="small-img" alt="img">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <p>Home / T-shirt</p>
+                <h1>Red printed T-shirt by HRX</h1>
+                <h4>$50.00</h4>
+                <select>
+                    <option>Select size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="#" class="btn">Add to cart</a>
+
+                <h3> Product Details</h3>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum veniam alias commodi perspiciatis molestias neque, ipsa in aliquid quisquam dolorem.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--------- Title --------->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+
+    <!--------- Related Product --------->
+
+    <div class="small-container">
+        <div class="row">
+            <div class="col-4">
+                <img src="./images/product-1.jpg" alt="img">
+                <h4>Red Printed T-shirt</h4>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/product-2.jpg" alt="img">
+                <h4>Shoes</h4>
+                <p>$30.00</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/product-3.jpg" alt="img">
+                <h4>Black pants</h4>
+                <p>$40.00</p>
+            </div>
+            <div class="col-4">
+                <img src="./images/product-4.jpg" alt="img">
+                <h4>Blue Printed T-shirt</h4>
+                <p>$20.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!---------- Footer ---------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App For Android and Ios Mobile Phone</p>
+                    <div class="app-logo">
+                        <img src="./images/play-store.png" alt="img">
+                        <img src="./images/app-store.png" alt="img">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="./images/logo-white.png" alt="img">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet ipsam quo et.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Join Affiliate</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------- js For Toggle Menu ------->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px";
+        function MenuToggle(){
+            if(MenuItems.style.maxHeight=="0px"){
+                MenuItems.style.maxHeight="400px";
+            }
+            else {
+                MenuItems.style.maxHeight="0px";
+            }
+        }
+        
+    </script>
+
+    <!--------- js For Product Gallery ------->
+
+    <script>
+        var productImg = document.getElementById("productImg");
+        var smallImg = document.getElementsByClassName("small-img");
+
+        smallImg[0].onclick = function(){
+            productImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function(){
+            productImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function(){
+            productImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function(){
+            productImg.src = smallImg[3].src;
+        }
+    </script>
+</body>
+</html>
